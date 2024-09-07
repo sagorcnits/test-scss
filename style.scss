@@ -1,3 +1,6 @@
+$small-screen: 576px;
+$medium-screen: 768px;
+
 * {
   padding: 0;
   margin: 0;
@@ -14,9 +17,19 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
+    @media (max-width: $small-screen) {
+      width: 100%;
+      padding: 30px 10px;
+      flex-direction: column;
+      gap: 10px;
+    }
+
     h1 {
       font-size: 60px;
       font-weight: bold;
+      @media (max-width: $small-screen) {
+        font-size: 40px;
+      }
     }
     button {
       padding: 15px 30px;
@@ -42,6 +55,11 @@
     justify-content: space-between;
     gap: 40px;
     padding-top: 20px;
+    @media (max-width: $small-screen) {
+      width: 100%;
+      padding: 0 10px;
+      flex-direction: column;
+    }
     .service_card {
       background-color: white;
       padding: 20px;
@@ -74,15 +92,27 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-
+    @media (max-width: $small-screen) {
+      width: 100%;
+      padding: 20px 10px;
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+    }
     img {
       width: 40%;
       margin: auto;
+      @media (max-width: $small-screen) {
+        width: 90%;
+      }
     }
     h1 {
       font-size: 60px;
       color: white;
       font-weight: bold;
+      @media (max-width: $small-screen) {
+        font-size: 30px;
+      }
     }
 
     p {
